@@ -1,0 +1,357 @@
+@import './_config.scss';
+//-----------------------------
+body{
+    overflow-x: hidden;
+}
+
+body,h1,h2,dl,dd,p{
+    margin: 0;
+}
+
+ol,ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    float: left;
+}
+
+img {
+    vertical-align:top;
+    border: 0;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+table{
+    border-collapse:collapse;
+    table-layout:fixed;
+    border: none;
+}
+button{
+    border: none;
+    background: none;
+}
+//-----------------------------
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "SourceHanSansCN",arial,"Microsoft Yahei", sans-serif;
+    font-size: 18px;
+}
+
+.clearfix:after,.container:after{
+    content:'';
+    clear:both;
+    display:block;
+    width: 0;
+    height: 0;
+}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+
+.mr0{
+    margin-right: 0!important;
+}
+
+.clear{
+    clear: both;
+}
+
+.responsive {
+    width: 100%;
+	height: auto;
+}
+
+.singletext{
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
+.img_title{
+    height: 70px;
+    img{
+        margin: 0 auto;
+        display: block;
+    }
+    &::after{
+        content: '';
+        display: block;
+        width: 50px;
+        height: 4px;
+        border-radius: 2px;
+        margin: 0 auto;
+        background: #dd2524;
+        margin-top: 30px;
+    }
+}
+
+#header{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    max-width: 1200px;
+    left: 0; top: 0; right: 0; bottom: 0;
+    margin: auto;
+    &.new_header a{
+        color: #000!important;
+    }
+    .nav{
+        float: right;
+        width: 62.5%;
+        height: 42px;
+        line-height: 42px;
+        margin-top: 36px;
+        li{
+            width: 16.6%;
+            text-align: center;
+            &:hover{
+                .subnav{
+                    display: block;
+                }
+            }
+        }
+        div{
+            position: relative;
+            cursor: pointer;
+        }
+        a{
+            color: #fff;
+        }
+        li:hover,.active{
+            &::after{
+                content: '';
+                display: block;
+                width: 30%;
+                height: 1px;
+                margin: 0 auto;
+                background: #fff;
+            }
+        }
+    }
+    .ico::after{
+        position: absolute;
+        right: 8%;
+        top: 40%;
+        display: block;
+        content: "";
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-top-color:#fff;
+    }
+    .subnav{
+        position: absolute;
+        width: 90%;
+        top: 40px;
+        left: 8%;
+        z-index: 10;
+        border-radius: 10px;
+        background-color: #fff;
+        display: none;
+        overflow: hidden;
+        li{
+            width: 100%;
+            height: 53px;
+            line-height: 53px;
+            font-size: 16px;
+            float: none;
+            border-top: 1px solid #f0f0f0;
+            &:first-child{
+                border-top: none;
+            }
+            &:hover{
+                background: #efefef;
+            }
+        }
+        a{
+            display: block;
+            color: #000;
+        }
+    }
+    .phone-nav{
+        display: none;
+    }
+    .logo{
+        padding: 27px 0 0 0;
+        width: 265px;
+    }
+}
+
+#footer{
+    background-color: #2d2d2d;
+    .container{
+        box-sizing: border-box;
+        padding: 85px 30px 70px 30px;
+        background-color: #2d2d2d;
+    }
+    .cover{
+        padding-bottom: 85px;
+        overflow: hidden;
+    }
+    dl{
+        float: left;
+        width: 19.5%;
+    }
+    dt{
+        margin-bottom: 28px;
+        color: #fff;
+    }
+    dd{
+        font-size: 16px;
+        margin-bottom: 18px;
+        word-wrap: break-word;
+    }
+
+    .phone{
+        dt,dd{
+            font-size: 24px;
+            color: #fff;
+        }
+    }
+    .tips{
+        padding-top: 30px;
+        clear: both;
+        border-top: 1px solid #838383;
+        a{
+            font-size: 16px;
+        }
+    }
+    .code{
+        width: 31%;
+        float: right;
+        overflow: hidden;
+    }
+    a{
+        color: #989898;
+        &:hover{
+            color: #fff;
+        }
+    }
+    .beian{
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #header{
+        .logo{
+            padding-left: 20px;
+        }
+        .ico::after{
+            right: 3%;
+        }
+    }
+}
+/* 小屏幕（平板，大于等于 768px） */
+@media (max-width: 1000px) {
+    #header{
+        .nav{
+            width: 65%;
+        }
+        li{
+            font-size: 16px;
+        }
+        .logo{
+            padding: 27px;
+            width: 200px;
+        }
+        .ico::after{
+            right: 0%;
+        }
+        .subnav{
+            left: 15%;
+        }
+    }
+    #footer{
+        .link{
+            width: 100%;
+            text-align: center;
+        }
+        dt{
+            font-size: 16px;
+        }
+        dd{
+            font-size: 14px;
+        }
+        .phone{
+            dt,dd{
+                font-size: 20px;
+            }
+        }
+        .code{
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 20px;
+            float: none;
+        }
+    }
+    .img_title{
+        img{
+            width: 150px;
+        }
+    }
+}
+
+/* 超小屏幕（手机，小于 768px） */
+@media screen and (max-width: 768px){
+    .container{
+        font-size: 16px;
+    }
+    #header{
+        .phone-nav{
+            display: block;
+            width: 60px;
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            float: right;
+            position: relative;
+            cursor: pointer;
+            .subnav{
+                width: 150px;
+                top: 40px;right: 30px;left: auto;
+                background-color: rgba($color: #fff, $alpha: 0.7);
+                position: absolute;
+                li{
+                    font-size: 14px;
+                }
+                .active{
+                    color: #f9b882;
+                }
+            }
+        }
+        .logo{
+            width: 150px;
+        }
+        .nav{
+            display: none;
+        }
+    }
+    .img_title{
+        img{
+            width: 120px;
+        }
+    }
+    #footer{
+        .container{
+            padding-top: 40px;
+        }
+        dt,.phone dt,.phone dd{
+            font-size: 14px;
+        }
+    }
+}

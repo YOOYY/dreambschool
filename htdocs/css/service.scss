@@ -1,0 +1,34 @@
+@import './_config.scss';
+$mimgUrl:$imgUrl+'service/';
+#top{
+    padding-top: 31.25%;
+    background: url($mimgUrl+'banner.jpg') no-repeat top center/contain;
+}
+#service{
+    padding: 4.7% 0;
+    h2{
+        font-size: 24px;
+        text-align: center;
+        margin: 28px;
+    }
+    p{
+        color: #333333;
+        line-height: 30px;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 1200px) {
+    #service{
+        padding: 4.7% 10px;
+    }
+}
+@media (max-width: 768px) {
+    #service{
+        h2{
+            margin: 14px;
+        }
+        p{
+            margin-bottom: 30px;
+        }
+    }
+}

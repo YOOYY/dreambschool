@@ -1,0 +1,246 @@
+#top {
+  padding-top: 31.25%;
+  background: url("../imgs/index/banner.jpg") no-repeat top center/contain;
+}
+
+#index {
+  padding: 6.25% 0;
+}
+
+#introduction p {
+  line-height: 30px;
+}
+
+#introduction .intro {
+  margin: 40px 0;
+}
+
+#introduction .iconbox {
+  width: 100%;
+  margin: 80px 0;
+  overflow: hidden;
+}
+
+#introduction .iconbox td {
+  text-align: center;
+  vertical-align: bottom;
+  border-right: 1px solid #e6e6e6;
+}
+
+#introduction .iconbox .last {
+  border-right: 0;
+}
+
+#introduction .iconbox h2 {
+  margin: 25px 0;
+}
+
+#history {
+  background: #f8f8fa;
+  padding-top: 5.2%;
+  padding-bottom: 3.125%;
+}
+
+#history .historyline {
+  width: 90%;
+  margin: 50px auto 0 auto;
+}
+
+#map {
+  padding-top: 6.25%;
+}
+
+#map .imgbox {
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+#map .imgbox div {
+  width: 50%;
+  float: left;
+  position: relative;
+}
+
+#map .imgbox div:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.2;
+  z-index: 1;
+  background-color: #000;
+}
+
+#map .imgbox div:hover:after {
+  content: none;
+}
+
+#map .imgbox img {
+  display: block;
+  width: 100%;
+}
+
+#joinus {
+  padding-top: 6.25%;
+}
+
+#joinus .chapter {
+  width: 96%;
+  margin: 0 auto;
+  margin-top: 4.166%;
+  overflow: hidden;
+}
+
+#joinus .chapter div {
+  width: 30%;
+  float: left;
+  text-align: center;
+  background-color: #fcf9fc;
+  box-shadow: 0px 0px 40px 0px rgba(221, 37, 36, 0.08);
+  border-radius: 10px;
+  border: solid 2px #f0f0f0;
+  margin-bottom: 40px;
+}
+
+#joinus .chapter div.middle {
+  margin: 0 4%;
+}
+
+#joinus .chapter div:hover {
+  border-color: #dd2524;
+}
+
+#joinus .chapter .title {
+  font-size: 24px;
+  color: #000;
+  margin-top: 50px;
+}
+
+#joinus .chapter .content {
+  font-size: 20px;
+  color: #333;
+  margin-top: 15px;
+}
+
+#joinus .chapter .more {
+  margin: 40px auto 50px auto;
+  display: block;
+  cursor: pointer;
+}
+
+.mask {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mask .cover {
+  width: 67.7%;
+  background-color: #fff;
+  border-radius: 16px;
+  margin: 0 auto;
+  margin-top: 3%;
+  position: relative;
+}
+
+.mask .cover .content {
+  height: 500px;
+  height: 76vh;
+  margin-right: 14px;
+  overflow-y: auto;
+}
+
+.mask .cover .content::-webkit-scrollbar {
+  width: 12px;
+}
+
+.mask .cover .content::-webkit-scrollbar-track {
+  background-color: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.mask .cover .content::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.mask .cover .close {
+  position: absolute;
+  left: 48.5%;
+  bottom: -14%;
+  width: 3.5%;
+  min-width: 20px;
+}
+
+.mask .chapter {
+  padding: 0 5% 5.07% 4.365%;
+}
+
+.mask h3 {
+  letter-spacing: 3px;
+}
+
+.mask p {
+  line-height: 145.4%;
+  margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  #index {
+    padding: 6.25% 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #introduction .intro {
+    margin: 10px 0;
+  }
+  #introduction .iconbox {
+    margin: 40px 0;
+  }
+  #introduction .iconbox h2 {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  #introduction .iconbox p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  #introduction .iconbox img {
+    width: 40px;
+  }
+  #history .historyline {
+    margin-top: 10px;
+  }
+  #map .imgbox {
+    margin-top: 10px;
+  }
+  #joinus .chapter div {
+    width: 46.5%;
+    margin: 10px 1% !important;
+  }
+  #joinus .chapter div .title {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  #joinus .chapter div .content {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  #joinus .chapter div .more {
+    width: 20px;
+    margin: 10px auto 20px auto;
+  }
+}
