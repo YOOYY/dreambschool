@@ -6,8 +6,20 @@ $(function () {
     },function(){
         $(this).removeClass('pulse animated');
     })
-    $('.phone-nav').click(function () {
-        $(this).children('ul').toggle();
+    $('.phone-nav img').click(function () {
+        $('.p_subnav').hide();
+        $('.phone-nav').children('ul').toggle();
+    })
+    $('.subnav li a').click(function () {
+        $('.p_subnav').hide();
+        $('.phone-nav').children('ul').hide();
+    })
+    $('.subnav li .p_t').click(function () {
+        $('.p_subnav').hide();
+        $(this).children('.p_subnav').show();
+    })
+    $('.p_subnav').click(function () {
+        $('.phone-nav').children('ul').hide();
     })
 })
 

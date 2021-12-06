@@ -2,28 +2,30 @@
     <div id="banner">
         <v-headpanel>
             <em>banner更换</em>
-            图片格式：首页轮播 1920*970px jpg/png,首页banner 1920x970 png,分页banner 1920x600 jpg,店铺图 960x600 jpg,大事记 1920宽 png,业务图1200x600 jpg,首页业务图 420x900 jpg
+            图片格式：jpg/png,
+            尺寸：首页轮播 1920*950,首页banner 1920x950,分页banner 1920x600,店铺图 960x600,大事记 1920宽 png,业务图1200x900,首页业务图 575x950
         </v-headpanel>
         <el-row>
             <el-col
                 :span="5"
                 v-for="(o, index) in bannerlist"
-                :key="index"
+                :key="o.id"
                 :offset="index%4 === 0 ? 0 : 1"
                 :style="index%4 === 0 ? 'clear:both' : ''"
             >
                 <el-card :body-style="{ padding: '0px' }">
                     <img
-                        :src="website+'/imgs/'+o.path+'/'+o.name+'?'+date"
+                        :src="website+'/imgs/'+o.path+'/'+o.name"
                         class="image"
                     >
                     <div class="buttonbar">
                         <span class="title">{{o.label}}</span>
                         <v-upload
                             @upload="updateImg"
-                            :name="o.name.slice(0, -4)"
+                            :name="o.name.split('.')[0]"
                             :url="url"
                             :path="o.path"
+                            :id="o.id"
                         ></v-upload>
                     </div>
                 </el-card>
@@ -41,17 +43,14 @@ export default {
     data() {
         return {
             url: "banner",
-            bannerlist: [],
-            date: ""
+            bannerlist: []
         };
     },
     methods: {
-        updateImg: function(file, path) {
-            if (path === "index") {
-                let id = file.slice(6, 7);
-                this.bannerlist.splice(id - 1, 1, { id: id, name: file });
-            }
-            this.date = new Date().getTime();
+        updateImg: function(name, path,id) {
+            let tmp = this.bannerlist[id - 1];
+            let tmp2 = {...tmp,name};
+            this.bannerlist.splice(id - 1, 1, tmp2);
         }
     },
     created() {

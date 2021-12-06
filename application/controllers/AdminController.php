@@ -82,20 +82,15 @@ class AdminController extends Front_Controller_Action {
     public function bannerAction() {
         $name = $this->getRequest()->getPost('name');
         $path = $this->getRequest()->getPost('path');
+        $id = (int)$this->getRequest()->getPost('id');
 
         $path = dirname(dirname(dirname(__FILE__))) . '/htdocs/imgs/'.$path.'/';
-        if($path === 'aboutus'){
-            $type = array('image/jpeg','image/png');
-        }else{
-            $type = array('image/jpeg');
-        }
+        $type = array('image/jpeg','image/png');
 
         try {
             $res = $this->_admin->upfile($name,$path,null,$type);
-            if($path === 'aboutus'){
-                $id = substr($res,6,1);
-                $this->_admin->update('banner',$id,array('name'=>$res));
-            }
+            $res = $res."?".mktime();
+            $this->_admin->update('banner',$id,array('name'=>$res));
             $res = ['error'=>0,'data'=>$res];
         } catch (Exception $e) {
             $res = $this->util->err($e);

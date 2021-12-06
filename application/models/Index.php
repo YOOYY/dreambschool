@@ -13,6 +13,11 @@ class Index
         return $this->_db->fetchAll('select * from ' . $table);
     }
 
+    public function imglist($type)
+    {
+        return $this->_db->fetchCol('select name from banner where path = "'.$type.'"');
+    }
+
     public function tablelistLimit($table,$limit)
     {
         return $this->_db->fetchAll('select * from ' . $table . ' limit '.$limit);

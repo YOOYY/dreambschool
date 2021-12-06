@@ -3,7 +3,7 @@
 body{
     overflow-x: hidden;
 }
-
+// .edslider { touch-action: pan-y; }
 body,h1,h2,dl,dd,p{
     margin: 0;
 }
@@ -104,7 +104,7 @@ button{
     z-index: 10;
     width: 100%;
     max-width: 1200px;
-    left: 0; top: 0; right: 0; bottom: 0;
+    left: 0; top: 0; right: 0;
     margin: auto;
     &.new_header a{
         color: #000!important;
@@ -201,10 +201,11 @@ button{
     .cover{
         padding-bottom: 85px;
         overflow: hidden;
+        position: relative;
     }
     dl{
         float: left;
-        width: 19.5%;
+        width: 15.83%;
     }
     dt{
         margin-bottom: 28px;
@@ -218,8 +219,20 @@ button{
 
     .phone{
         dt,dd{
-            font-size: 24px;
             color: #fff;
+        }
+    }
+    .erweibox{
+        float: right;
+        width: 10%;
+        img {
+            width: 100%;
+        }
+        p{
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            margin-top: 16px;
         }
     }
     .tips{
@@ -292,12 +305,12 @@ button{
                 font-size: 20px;
             }
         }
-        .code{
-            width: 80%;
-            margin: 0 auto;
-            padding-top: 20px;
-            float: none;
-        }
+        // .code{
+        //     width: 80%;
+        //     margin: 0 auto;
+        //     padding-top: 20px;
+        //     float: none;
+        // }
     }
     .img_title{
         img{
@@ -311,7 +324,15 @@ button{
     .container{
         font-size: 16px;
     }
+    .swiper-slide {
+        overflow: visible!important;
+    }
     #header{
+        right: auto;
+        bottom: auto;
+        .logo{
+            padding-bottom: 0;
+        }
         .phone-nav{
             display: block;
             width: 60px;
@@ -321,16 +342,58 @@ button{
             float: right;
             position: relative;
             cursor: pointer;
+            z-index: 100;
+            .p_t{
+                position: relative;
+            }
             .subnav{
-                width: 150px;
+                width: 130px;
                 top: 40px;right: 30px;left: auto;
-                background-color: rgba($color: #fff, $alpha: 0.7);
+                background-color: #fff;
                 position: absolute;
+                z-index: 100;
+                overflow: visible!important;
                 li{
                     font-size: 14px;
+                    &:first-child{
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                    }
+                    &:last-child{
+                        border-bottom-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                    }
                 }
                 .active{
                     color: #f9b882;
+                }
+            }
+            .p_subnav{
+                position: absolute;
+                width: 90%;
+                top: 0;
+                left: -95%;
+                z-index: 10;
+                border-radius: 10px;
+                background-color: #fff;
+                display: none;
+                li{
+                    width: 100%;
+                    height: 53px;
+                    line-height: 53px;
+                    font-size: 16px;
+                    float: none;
+                    border-top: 1px solid #f0f0f0;
+                    &:first-child{
+                        border-top: none;
+                    }
+                    &:hover{
+                        background: #efefef;
+                    }
+                }
+                a{
+                    display: block;
+                    color: #000;
                 }
             }
         }
@@ -349,9 +412,35 @@ button{
     #footer{
         .container{
             padding-top: 40px;
+            .cover{
+                padding-bottom: 20px;
+            }
+        }
+        dt,dd{
+            text-align: center;
         }
         dt,.phone dt,.phone dd{
             font-size: 14px;
+        }
+        dl{
+            width: 33%;
+            min-height: 200px;
+            &.phone{
+                width: 100%;
+                text-align: center;
+                clear: both;
+                float: none;
+                min-height: auto;
+                dt,dd{
+                    display: inline;
+                }
+            }
+        }
+        .erweibox{
+            position: absolute;
+            right: 25%;
+            top: 54.2%;
+            width: 34%;
         }
     }
 }

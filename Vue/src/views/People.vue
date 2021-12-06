@@ -1,7 +1,7 @@
 <template>
     <div id="article">
         <v-headpanel>
-            <em>教师学员信息更换</em>教师图片尺寸 420x550 jpg/png,学员尺寸500x900 jpg/png,名字图片 24px 锐字真言体免费商用,&lt;br&gt;是换行符号,学员信息展示前4条
+            <em>教师学员信息更换</em>教师图片尺寸 420x550 jpg/png,学员尺寸575x950 jpg/png,名字图片 75x25 锐字真言体免费商用,&lt;br&gt;是换行符号,学员信息展示前4条
         </v-headpanel>
 
         <el-button

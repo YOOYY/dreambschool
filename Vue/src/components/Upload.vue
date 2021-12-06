@@ -36,6 +36,9 @@ export default {
             type: String,
             default: "image/jpeg,image/jpg,image/png"
         },
+        id: {
+            type: String,
+        },
         table: {
             type: String,
         },
@@ -59,6 +62,7 @@ export default {
                 data.append("multfile", file);
                 data.append("name", this.name);
                 data.append("table", this.table);
+                data.append("id", this.id);
                 if (this.path) {
                     data.append("path", this.path);
                 }
@@ -66,7 +70,7 @@ export default {
                 this.ajax(this.url, data)
                     .then(res => {
                         if (res) {
-                            this.$emit("upload", res, path);
+                            this.$emit("upload", res, path,this.id);
                             this.$message({
                                 type: "success",
                                 message: "上传成功！"

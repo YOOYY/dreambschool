@@ -108,7 +108,6 @@ button {
   left: 0;
   top: 0;
   right: 0;
-  bottom: 0;
   margin: auto;
 }
 
@@ -219,11 +218,12 @@ button {
 #footer .cover {
   padding-bottom: 85px;
   overflow: hidden;
+  position: relative;
 }
 
 #footer dl {
   float: left;
-  width: 19.5%;
+  width: 15.83%;
 }
 
 #footer dt {
@@ -238,8 +238,23 @@ button {
 }
 
 #footer .phone dt, #footer .phone dd {
-  font-size: 24px;
   color: #fff;
+}
+
+#footer .erweibox {
+  float: right;
+  width: 10%;
+}
+
+#footer .erweibox img {
+  width: 100%;
+}
+
+#footer .erweibox p {
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  margin-top: 16px;
 }
 
 #footer .tips {
@@ -310,12 +325,6 @@ button {
   #footer .phone dt, #footer .phone dd {
     font-size: 20px;
   }
-  #footer .code {
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 20px;
-    float: none;
-  }
   .img_title img {
     width: 150px;
   }
@@ -326,6 +335,16 @@ button {
   .container {
     font-size: 16px;
   }
+  .swiper-slide {
+    overflow: visible !important;
+  }
+  #header {
+    right: auto;
+    bottom: auto;
+  }
+  #header .logo {
+    padding-bottom: 0;
+  }
   #header .phone-nav {
     display: block;
     width: 60px;
@@ -335,20 +354,62 @@ button {
     float: right;
     position: relative;
     cursor: pointer;
+    z-index: 100;
+  }
+  #header .phone-nav .p_t {
+    position: relative;
   }
   #header .phone-nav .subnav {
-    width: 150px;
+    width: 130px;
     top: 40px;
     right: 30px;
     left: auto;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: #fff;
     position: absolute;
+    z-index: 100;
+    overflow: visible !important;
   }
   #header .phone-nav .subnav li {
     font-size: 14px;
   }
+  #header .phone-nav .subnav li:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  #header .phone-nav .subnav li:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
   #header .phone-nav .subnav .active {
     color: #f9b882;
+  }
+  #header .phone-nav .p_subnav {
+    position: absolute;
+    width: 90%;
+    top: 0;
+    left: -95%;
+    z-index: 10;
+    border-radius: 10px;
+    background-color: #fff;
+    display: none;
+  }
+  #header .phone-nav .p_subnav li {
+    width: 100%;
+    height: 53px;
+    line-height: 53px;
+    font-size: 16px;
+    float: none;
+    border-top: 1px solid #f0f0f0;
+  }
+  #header .phone-nav .p_subnav li:first-child {
+    border-top: none;
+  }
+  #header .phone-nav .p_subnav li:hover {
+    background: #efefef;
+  }
+  #header .phone-nav .p_subnav a {
+    display: block;
+    color: #000;
   }
   #header .logo {
     width: 150px;
@@ -362,7 +423,33 @@ button {
   #footer .container {
     padding-top: 40px;
   }
+  #footer .container .cover {
+    padding-bottom: 20px;
+  }
+  #footer dt, #footer dd {
+    text-align: center;
+  }
   #footer dt, #footer .phone dt, #footer .phone dd {
     font-size: 14px;
+  }
+  #footer dl {
+    width: 33%;
+    min-height: 200px;
+  }
+  #footer dl.phone {
+    width: 100%;
+    text-align: center;
+    clear: both;
+    float: none;
+    min-height: auto;
+  }
+  #footer dl.phone dt, #footer dl.phone dd {
+    display: inline;
+  }
+  #footer .erweibox {
+    position: absolute;
+    right: 25%;
+    top: 54.2%;
+    width: 34%;
   }
 }

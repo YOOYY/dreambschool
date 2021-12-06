@@ -13,6 +13,7 @@ class ServiceController extends Front_Controller_Action {
         $index = new Index();
         $this->view->header= '<link rel="stylesheet" href="'.$this->view->baseUrl.'css/service.css">';
         $this->view->service = $index->tablelistLimit('service',3);
+        $this->view->imglist = $index->imglist('service');
         $this->render('index');
     }
 }
