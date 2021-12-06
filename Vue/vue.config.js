@@ -1,5 +1,5 @@
 module.exports = {
     devServer: {
-        proxy: 'http://test.dreambschool.com'
+        proxy: 'http://test.com'
     }
 }

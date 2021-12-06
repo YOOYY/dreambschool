@@ -1,4 +1,4 @@
-<div id="footer">
+﻿<div id="footer">
     <div class="container">
         <div class="cover">
             <dl>
@@ -31,7 +31,7 @@
             </dl>
             <dl class="phone">
                 <dt>联系我们</dt>
-                <dd>021-65882888</dd>
+                <dd>021-65128123</dd>
                 <dd>mxsxy@wedream.com</dd>
             </dl>
             <div class="erweibox">

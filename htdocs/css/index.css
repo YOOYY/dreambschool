@@ -16,6 +16,10 @@
   margin-bottom: 20px;
 }
 
+#top, #dean, #service, #teacher, #student, #news, .swiper-container {
+  overflow: hidden;
+}
+
 .navigatorBox {
   width: 35%;
   position: absolute;

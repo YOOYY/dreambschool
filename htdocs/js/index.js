@@ -33,11 +33,11 @@ $(function () {
         $('#top').css({width:ww,height:'190px'})
     }
 
-    var mySwiper = new Swiper('#mySlide',{
-        autoplay:3000,
-        loop:true,
-        speed:1000
-    });
+    // var mySwiper = new Swiper('#mySlide',{
+    //     autoplay:3000,
+    //     loop:true,
+    //     speed:1000
+    // });
     $('#top .next').click(function(){
         mySwiper.swipeNext();
     })
